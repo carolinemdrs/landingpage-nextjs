@@ -6,8 +6,8 @@ import styled from 'styled-components';
 import Button from '@material-ui/core/Button';
 
 const InputsStyled = styled.div`
-  display:flex;
-  flex-direction:column;
+  display:grid;
+  grid-gap:10px;
 `;
 
 const RadioButtonStyle = styled.div`
@@ -18,6 +18,7 @@ const RadioButtonStyle = styled.div`
 const FormStyled = styled.div`
   display: flex;
   flex-direction:row;
+  color:#bdbdbd;
 `;
 
 const Main = styled.div`
@@ -34,11 +35,18 @@ const Img = styled.img`
 const TextEbook = styled.div`
   display:flex;
   align-items:center;
-  padding:50px
+  padding:50px;
 `;
 const Form = styled.form`
-  padding:50px
+  padding:50px;
 `;
+const Text = styled.p`
+  align-items:center;
+  display:flex;
+  align-content:center;
+  font-size:22px;
+  margin:5px;
+`
 
 class Ebook extends React.Component {
     constructor(props) {
@@ -69,10 +77,11 @@ class Ebook extends React.Component {
         <Main>
           <TextEbook>
             <Img src="./ebook.png" alt="ebook" />
-              <p>Aproveite a oportunidade para baixar o ebook com excelentes dicas de como começar seus
-                estudos em um curso técnico em enfermagem! quais as principais bibliografias? práticas?
-                Entrevistas com profissionais da área etc etc
-              </p>
+            <Text>
+              Aproveite a oportunidade para baixar o ebook "tal" com excelentes dicas de como começar seus
+              estudos em um curso técnico em enfermagem! quais as principais bibliografias? práticas?
+              Entrevistas com profissionais da área (etc etc etc etc...)
+            </Text>
             </TextEbook>
         
         <Form> 
@@ -139,8 +148,6 @@ class Ebook extends React.Component {
             </FormStyled>
             <Button type='submit' color="secondary">Receber meu Ebook!</Button>
         </Form>   
-       
-        
     </Main>
       );
     } 

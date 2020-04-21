@@ -4,12 +4,14 @@ import Header from '../components/header';
 import Ebook from '../components/ebook';
 import Footer from '../components/footer';
 import Students from '../components/students';
+import Video from '../components/video';
 
 
 export default function Home() {
   return (
     <div className="container">
       <Head>
+        <meta name="curso de enfermagem" content="receba ebook sobre curso técnico em enfermagem."/> 
         <title>Técnico em enfermagem</title>
         <link rel="icon" href="/saude.svg" />
       </Head>
@@ -18,23 +20,10 @@ export default function Home() {
         <Header />
         <Ebook />
         <Students />
+        <Video />
         <Footer />
       </main>   
     </div>
   )
 }
-/*
-<style jsx global>{`
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
-    sans-serif;
-}
 
-* {
-  box-sizing: border-box;
-}
-`}</style>*/

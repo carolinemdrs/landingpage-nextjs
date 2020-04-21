@@ -20,7 +20,14 @@ const Main = styled.div`
     flex-direction:column;
     align-items:center;
 `;
-
+const Text = styled.p`
+  align-items:center;
+  display:flex;
+  align-content:center;
+  font-size:25px;
+  margin:5px;
+  color: #78909c;
+`
 const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
@@ -39,7 +46,7 @@ export default function Students() {
 
   return (
     <Main>      
-      Veja o que alunos e ex alunos estão falando
+      <Text> Veja o que alunos e ex alunos estão falando </Text>
       <StudenteContainer className={classes.root}>
         <Student>
           <Avatar alt="aluna" src="/rose.jpeg" className={classes.large} />
